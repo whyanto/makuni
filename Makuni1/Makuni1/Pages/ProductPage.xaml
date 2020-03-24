@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Makuni1.Pages.ProductPage">
+
+    <ScrollView HeightRequest="5000">
+
+        <Grid RowSpacing="0" BackgroundColor="White" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" Margin="20,50,20,20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="AUTO"/>
+                        <ColumnDefinition Width="150"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout>
+                        <Label x:Name="ProductName" TextColor="DarkBlue" Style="{StaticResource PoppinsBold}" FontSize="18"/>
+                        <Label x:Name="ProductCategory" TextColor="DarkBlue"/>
+                        <Label Text="HYVÄ" Style="{StaticResource PorkkanaVäriLabel}" FontAttributes="Bold" FontSize="14" />
+
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" HeightRequest="200" WidthRequest="150" BackgroundColor="White">
+                        <Image x:Name="ProductImage" Aspect="AspectFill"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="1" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Spacing="0" >
+                <StackLayout Orientation="Horizontal" Spacing="0"  HorizontalOptions="Center">
+                    <Label Text="40" Style="{StaticResource PoppinsBold}" TextColor="DarkBlue" FontSize="22" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label Text="% vähemmän sokeria" Style="{StaticResource PoppinsRegular}" TextColor="DarkBlue" FontSize="14" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="Center" >
+                    <Label Text="20" Style="{StaticResource PoppinsBold}" TextColor="DarkBlue" FontSize="22" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label Text="% enemmän kuitua" Style="{StaticResource PoppinsRegular}" TextColor="DarkBlue" FontSize="14" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="Center">
+                    <Label Text="10" Style="{StaticResource PoppinsBold}" TextColor="DarkBlue" FontSize="22" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label Text="% pienempi hiilijalanjälki" Style="{StaticResource PoppinsRegular}" TextColor="DarkBlue" FontSize="14" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <Label Margin="10" 
+                       Text="kuin muissa vastaavissa tuotteissa keskimäärin" 
+                       TextColor="DarkBlue" 
+                       Style="{StaticResource PoppinsRegular}" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center"
+                       FontSize="12"/>
+                <StackLayout Spacing="0">
+                    <Label Text="Ei sovi sinulle:" TextColor="Red" FontSize="18" Style="{StaticResource PoppinsBold}"  HorizontalOptions="Center" 
+                           VerticalOptions="Center" Padding="0"/>
+                    <Label Text="sisältää gluteenia" TextColor="Red" FontSize="18" Style="{StaticResource PoppinsMedium}"  HorizontalOptions="Center" 
+                               VerticalOptions="Center"/>
+                    <Button Text="ARVOSTELE TUOTE" CornerRadius="30" HeightRequest="60" Clicked="ArvosteleTuote_Clicked"/>
+                </StackLayout>
+
+            </StackLayout>
+
+            <Frame Grid.Row="2" Margin="15" Padding="0" CornerRadius="15">
+                <StackLayout Margin="20">
+                    <Label Text="RAVINTOTIEDOT" Style="{StaticResource PoppinsBold}" FontSize="20" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="per 100g" Style="{StaticResource PoppinsRegular}" FontSize="16" HorizontalOptions="EndAndExpand"/>
+
+                    <Grid BackgroundColor="WhiteSmoke" RowSpacing="2">
+
+
+                        <StackLayout Grid.Row="0" Orientation="Horizontal" BackgroundColor="White">
+                            <StackLayout Grid.Column="0" BackgroundColor="Green" WidthRequest="50" HeightRequest="50"/>
+                            <StackLayout Grid.Column="1">
+                                <Label Text="Sokerit" Style="{StaticResource PoppinsRegular}" FontSize="14"/>
+                                <Label Text="Tuotteessa on keskinkertaisesti sokeria" Style="{StaticResource PorkkanaVäriLabel}"/>
+                            </StackLayout>
+                            <Label Grid.Column="2" Text="14 g"  TextColor="LightGreen" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1" Orientation="Horizontal" BackgroundColor="White">
+                            <StackLayout Grid.Column="0" BackgroundColor="Green" WidthRequest="50" HeightRequest="50"/>
+                            <StackLayout Grid.Column="1">
+                                <Label Text="Kuidut" Style="{StaticResource PoppinsRegular}" FontSize="14"/>
+                                <Label Text="Tuotteessa on paljon kuitua" Style="{StaticResource PorkkanaVäriLabel}"/>
+                            </StackLayout>
+                            <Label Grid.Column="2" Text="10 g" TextColor="LightGreen" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Orientation="Horizontal" BackgroundColor="White">
+                            <StackLayout Grid.Column="0" BackgroundColor="Green" WidthRequest="50" HeightRequest="50"/>
+                            <StackLayout Grid.Column="1">
+                                <Label Text="Kalorit" Style="{StaticResource PoppinsRegular}" FontSize="14"/>
+                                <Label Text="Tuotteessa on keskinkertaisesti kaloreita" Style="{StaticResource PorkkanaVäriLabel}"/>
+                            </StackLayout>
+                            <Label Grid.Column="2" Text="390 g" TextColor="LightGreen" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+
+
+
+
+
+
+                    </Grid>
+                </StackLayout>
+            </Frame>
+
+
+
+
+            <Frame Grid.Row="3" Margin="15" Padding="0" CornerRadius="15" BackgroundColor="Red" x:Name="AllergeeniGrid">
+                <Grid>
+                    
+                
+                    <Label Text="ALLERGEENIT" Style="{StaticResource PoppinsBold}" FontSize="20" HorizontalOptions="CenterAndExpand"/>
+
+                           
+
+
+                        <ListView HasUnevenRows="True"
+                                     RowHeight="10"
+                                     x:Name="LvOnAllergiaa"
+                                     >
+                            <ListView.ItemTemplate >
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Spacing="0">
+                                            <StackLayout BackgroundColor="Red">
+
+                                                <Label FontSize="Medium"
+                                                               VerticalOptions="CenterAndExpand"
+                                                                HorizontalTextAlignment="Center"
+                                                               TextColor="Black"
+                                                               Text="{Binding Name}"
+                                                               />
+                                            </StackLayout>
+                                            <StackLayout HeightRequest="1" BackgroundColor="LightGray" Margin="20,0,20,0" Spacing="0"/>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                    
+                </Grid>
+            </Frame>
+
+
+            <Frame Grid.Row="4" Margin="15" Padding="0" CornerRadius="15" BackgroundColor="Green">
+                <StackLayout Margin="20">
+                    <Label Text="HIILIJALANJÄLKI"  Style="{StaticResource PoppinsBold}" FontSize="20" HorizontalOptions="CenterAndExpand"/>
+
+                    <Grid BackgroundColor="WhiteSmoke" RowSpacing="2">
+                        <StackLayout Grid.Row="0" Orientation="Horizontal" BackgroundColor="Green">
+                            <StackLayout Grid.Column="1">
+                                <Label Text="Alkuperämaa: Suomi" TextColor="White" FontSize="18"/>
+                                <Label Text="Tuote on tuotettu lähellä sinua ja sen kuljetusmatka on lyhyt" TextColor="White"/>
+                            </StackLayout>
+
+                        </StackLayout>
+                        <StackLayout Grid.Row="1" Orientation="Horizontal" BackgroundColor="Green">
+                            <StackLayout Grid.Column="1">
+                                <Label Text="Käytetty vesimäärä: Keskinkertainen" TextColor="White" FontSize="18"/>
+                                <Label Text="Kauran viljelyssä käytetään keskinkertainen määrä vettä" TextColor="White" />
+                            </StackLayout>
+
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Orientation="Horizontal" BackgroundColor="Green">
+                            <StackLayout Grid.Column="1">
+                                <Label Text="Pakkaus: Kartonki" TextColor="White" FontSize="18"/>
+                                <Label Text="Kierrätetään kartonkipakkauksien mukana" TextColor="White" />
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

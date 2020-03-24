@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             mc:Ignorable="d"
+             x:Class="Makuni1.Pages.InfoPages.SecondInfo">
+    <StackLayout  HorizontalOptions="Center" >
+        <Frame HeightRequest="460" WidthRequest="320" BackgroundColor="White" CornerRadius="20" VerticalOptions="EndAndExpand" HorizontalOptions="Center" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="360"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="AUTO"/>
+                    <RowDefinition Height="5"/>
+                </Grid.RowDefinitions>
+
+
+                <StackLayout >
+                    <Image Source="introskannaus19.jpg" HeightRequest="200" WidthRequest="200" Aspect="AspectFit" Margin="60,0,60,0" />
+                    <ImageButton Source="Delete64.png"  HeightRequest="40" Clicked="ImageButton_Clicked" HorizontalOptions="End" BackgroundColor="White" TranslationY="-200"/>
+                    <StackLayout TranslationY="-40">
+                        
+                    
+                    <Label Text="Skannaa, tutki, kerro!"
+                                   Style="{StaticResource LeckerliOne}"
+                                   TextColor="DarkBlue" 
+                                   FontSize="26"
+                                   HorizontalTextAlignment="Center"
+                                    Margin="70,0,70,0"
+                               />
+
+                    <Label Text="Tutki mistä ruokasi koostuu, kerro mielipiteesi ja auta tekemään maailmasta vähän parempi. Vaikutetaan yhdessä! Tutki mistä ruokasi koostuu, ja kerro mielipiteesi ja auta tekemään maailmasta vähän parempi. Vaikutetaan yhdessä!"
+                                       Style="{StaticResource PoppinsRegular}" TextColor="Blue"
+                                       HorizontalTextAlignment="Center"
+                                       />
+                </StackLayout>
+                    
+                </StackLayout>
+
+                <StackLayout Grid.Row="1"/>
+
+                <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" VerticalOptions="End">
+                    <Button BorderColor="Blue" BorderWidth="3" BackgroundColor="White" HeightRequest="20" WidthRequest="20" CornerRadius="10" Clicked="Button_Clicked" />
+                    <Button BorderColor="Blue" BorderWidth="3" HeightRequest="20" WidthRequest="20" CornerRadius="10" BackgroundColor="Blue"/>
+                    <Button BorderColor="Blue" BorderWidth="3" HeightRequest="20" WidthRequest="20" CornerRadius="10" BackgroundColor="White"/>
+                </StackLayout>
+                
+                <StackLayout Grid.Row="3"/>
+
+            </Grid>
+            <Frame.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Right" Swiped="SwipedRight"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+        <StackLayout HeightRequest="25"/>
+    </StackLayout>
+</pages:PopupPage>

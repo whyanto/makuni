@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Makuni1.Pages.FeedbackPage"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+
+    <ScrollView>
+    
+    <Grid RowSpacing="20" BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0">
+            <Label Text="Kuva" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="Orange" FontSize="40" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" >
+            <Label Text="IDEOI TUOTE!" 
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="CenterAndExpand" 
+                   FontSize="18"
+                   TextColor="DarkBlue" 
+                   Style="{StaticResource PoppinsBold}"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Margin="40,0,40,0" >
+            <Label Text="Oletko aina miettinyt, että kaupan hyllyltä puuttuu jotain? Kerro meille tuoteideasi tai kehitysehdotuksesi, niin pyrimme saamaan toiveesi toteutumaan!"
+                       HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="#575757" 
+                   HorizontalTextAlignment="Center"
+                   Style="{StaticResource PoppinsRegular}"
+                   FontSize="14"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="4">
+            <Frame CornerRadius="20" Margin="30,0,30,0" Padding="3" BackgroundColor="DarkBlue" HeightRequest="300">
+                <Frame CornerRadius="20" BackgroundColor="White">
+                    <Entry />
+                </Frame>
+            </Frame>
+        </StackLayout>
+
+        <StackLayout Grid.Row="5" Margin="60,0,60,0">
+            <Button  BackgroundColor="#F8B113" CornerRadius="30" HeightRequest="60"
+                    Text="LÄHETÄ IDEA" 
+                     TextColor="White" 
+                     FontSize="20" android:Button.UseDefaultShadow="true"/>
+
+        </StackLayout>
+    </Grid>
+</ScrollView>
+</ContentView>

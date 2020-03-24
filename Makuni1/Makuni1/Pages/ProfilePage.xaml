@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Makuni1.Pages.ProfilePage"
+             NavigationPage.HasNavigationBar="True"
+             >
+
+
+
+    <ScrollView HeightRequest="5000">
+
+        <Grid RowSpacing="0" BackgroundColor="LightGray">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="360"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Style="{StaticResource PorkkanaVäriStack}">
+                <Image Source="hahmomuna1.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="150"/>
+
+                <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" Style="{StaticResource PorkkanaVäriStack}">
+                    <Grid RowSpacing="0" ColumnSpacing="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="AUTO"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Style="{StaticResource PorkkanaVäriFrame}" Padding="0" HasShadow="False">
+                            <StackLayout>
+                                <Label Text="PISTEESI" Grid.Column="0" HorizontalOptions="CenterAndExpand" Style="{StaticResource PoppinsRegular}" TextColor="White"/>
+                                <Label Text="250" Grid.Column="0" HorizontalOptions="Center"  Grid.Row="1" Style="{StaticResource PoppinsBold}" TextColor="White"  FontSize="Large"/>
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                
+                            </Frame.GestureRecognizers>
+                        </Frame>
+
+                        <Frame Grid.Column="1" Style="{StaticResource PorkkanaVäriFrame}" Padding="0" HasShadow="False">
+                            <StackLayout >
+                                <Label Text="MAKUSTELUT" Grid.Column="1"  HorizontalOptions="CenterAndExpand" Style="{StaticResource PoppinsRegular}" TextColor="White" />
+                                <Label Text="32" Grid.Column="1"  HorizontalOptions="Center" Grid.Row="1" Style="{StaticResource PoppinsBold}" TextColor="White"  FontSize="Large"/>
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+
+                            </Frame.GestureRecognizers>
+                        </Frame>
+
+                        <Frame Grid.Column="2" Style="{StaticResource PorkkanaVäriFrame}" Padding="0" HasShadow="False">
+                            <StackLayout >
+                                <Label Text="VIESTIT" Grid.Column="2" HorizontalOptions="CenterAndExpand" Style="{StaticResource PoppinsRegular}" TextColor="White" />
+                                <Label Text="123" Grid.Column="2" HorizontalOptions="Center" Grid.Row="1" Style="{StaticResource PoppinsBold}" TextColor="White"  FontSize="Large"/>
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout  Margin="40,0,40,0">
+                    <Label Text="Lorem ipsum dolor sit amet, consecterur adipiscing elit, sed do eiusmod tempor incideclunt ut labore et dolore magna."
+                       HorizontalTextAlignment="Center" 
+                       TextColor="White"/>
+                </StackLayout>
+                <StackLayout HeightRequest="30"/>
+
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="1" Margin="20" Spacing="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="1" Text="OMAT TIEDOT" TextColor="DarkBlue" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Style="{StaticResource PoppinsBold}"/>
+                    <ImageButton Grid.Column="2" Source="ProfiiliMuokkaa18.png" Aspect="AspectFit" HorizontalOptions="EndAndExpand" Scale="0.6" BackgroundColor="LightGray"/>
+                    <StackLayout Grid.Row="1" Grid.Column="1" Margin="20,0,20,0" >
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="Ikä:"/>
+                                <Label Text="Sukupuoli:"/>
+                                <Label Text="Paikkakunta:"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Vertical" Grid.Column="1" Spacing="0" >
+                                <Label Text="22" HorizontalOptions="End" Style="{StaticResource PoppinsBold}" TextColor="DarkBlue"/>
+                                <Label Text="Nainen" HorizontalOptions="End" Style="{StaticResource PoppinsBold}" TextColor="DarkBlue" />
+                                <Label Text="Peräkorpi" HorizontalOptions="End" Style="{StaticResource PoppinsBold}" TextColor="DarkBlue" />
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+
+
+
+
+
+
+
+
+            <Frame Grid.Row="2" CornerRadius="20" BackgroundColor="White" Margin="15" >
+                <StackLayout Spacing="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="50"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Column="1" Text="RUOKAVALIO" TextColor="LightGreen" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Style="{StaticResource PoppinsBold}"/>
+                        <ImageButton Grid.Column="2" Source="ProfiiliMuokkaa18.png" Aspect="AspectFit" HorizontalOptions="EndAndExpand" Scale="0.6" BackgroundColor="White"/>
+
+                        <Label Grid.Column="1" Grid.Row="1" Text="Noudattamasi ruokavalio:" Style="{StaticResource PoppinsBold}" TextColor="LightGreen" HorizontalOptions="Center"/>
+                    </Grid>
+
+
+                    <StackLayout Spacing="2" BackgroundColor="LightGray">
+                        <StackLayout Orientation="Horizontal" HeightRequest="50" BackgroundColor="White" >
+                            <ImageButton Source="ProfiiliValintavih18.png" Aspect="AspectFit" Scale="0.5" BackgroundColor="White"/>
+                            <Label Text="Gluteeniton" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="50" BackgroundColor="White">
+                            <ImageButton Source="ProfiiliValintavih18.png" Aspect="AspectFit" Scale="0.5" BackgroundColor="White" />
+                            <Label Text="Vegaaninen" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="50" BackgroundColor="White">
+                            <ImageButton Source="ProfiiliValintavih18.png" Aspect="AspectFit" Scale="0.5" BackgroundColor="White"/>
+                            <Label Text="Vähärasvainen" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="3" CornerRadius="20" BackgroundColor="White" Margin="15" >
+                <StackLayout Spacing="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="50"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Column="1" Text="ALLERGEENIT" TextColor="Red" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Style="{StaticResource PoppinsBold}"/>
+                        <ImageButton Grid.Column="2" Source="ProfiiliMuokkaa18.png" Aspect="AspectFit" HorizontalOptions="EndAndExpand" Scale="0.6" BackgroundColor="White"/>
+
+                        <Label Grid.Column="1" Grid.Row="1" Text="Välttelemäni allergeenit::" Style="{StaticResource PoppinsBold}" TextColor="Red" HorizontalOptions="Center"/>
+                    </Grid>
+
+
+                    <StackLayout Spacing="2" BackgroundColor="LightGray">
+                        <StackLayout Orientation="Horizontal" HeightRequest="50" BackgroundColor="White" >
+                            <ImageButton Source="ProfiiliValintapun18.png" Aspect="AspectFit" Scale="0.5" BackgroundColor="White" />
+                            <Label Text="Gluteeni" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="50" BackgroundColor="White">
+                            <ImageButton Source="ProfiiliValintapun18.png" Aspect="AspectFit" Scale="0.5" BackgroundColor="White" />
+                            <Label Text="Paakkuuntumisenesto aine E123" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="4" CornerRadius="20" BackgroundColor="#F8B113" Margin="15" >
+                <StackLayout Spacing="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="30"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Column="1" 
+                               Text="Kaksin on kivampaa!"
+                               TextColor="White" 
+                               FontSize="16" 
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center" 
+                               Style="{StaticResource PoppinsMedium}"
+                               HorizontalTextAlignment="Center"/>
+
+                        <Label Grid.Column="1"
+                               Grid.Row="1" 
+                               Text="KUTSU KAVERI MUKAAN MAKUSTELEMAAN!"
+                               Style="{StaticResource PoppinsBold}" 
+                               FontSize="18"
+                               TextColor="White" 
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center"/>
+
+                        <Image Grid.Row="2"
+                               Grid.Column="1" 
+                               Source="PaketitKaveri1.png"
+                               HeightRequest="100"
+                               Aspect="AspectFit"
+                               />
+
+                        <Label Grid.Column="1"
+                               Grid.Row="3" 
+                               Text="Kaksin on kivampaa! Lähetä kutsu kaverille ja ansaitse 10 pistettä."
+                               Style="{StaticResource PoppinsLight}" 
+                               FontSize="16"
+                               TextColor="White" 
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center"/>
+
+                        <Button Grid.Column="1"
+                                Grid.Row="4"
+                                WidthRequest="150"
+                                HeightRequest="80"
+                                Text="KUTSU KAVERI"
+                                CornerRadius="40"
+                                TextColor="DarkBlue"
+                                BackgroundColor="White"
+                                />
+
+                    </Grid>
+                    
+                </StackLayout>
+            </Frame>
+
+            <StackLayout Grid.Row="5" Spacing="1" Margin="20" BackgroundColor="Gray">
+                <Frame BackgroundColor="LightGray" HasShadow="False">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="ASETUKSET"
+                           TextColor="DarkBlue"
+                          Style="{StaticResource PoppinsBold}"
+                               FontSize="20"/>
+                    </StackLayout>
+
+                </Frame>
+                <Frame BackgroundColor="LightGray" HasShadow="False">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="FAQ"
+                           TextColor="DarkBlue"
+                          Style="{StaticResource PoppinsBold}"
+                               FontSize="20"/>
+                    </StackLayout>
+
+                </Frame>
+                <Frame BackgroundColor="LightGray" HasShadow="False">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="TIETOSUOJASELOSTE"
+                           TextColor="DarkBlue"
+                          Style="{StaticResource PoppinsBold}"
+                               FontSize="20"/>
+                    </StackLayout>
+
+                </Frame>
+                <Frame BackgroundColor="LightGray" HasShadow="False">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="INFO"
+                           TextColor="DarkBlue"
+                          Style="{StaticResource PoppinsBold}"
+                               FontSize="20"/>
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+        </Grid>
+
+
+    </ScrollView>
+</ContentView>

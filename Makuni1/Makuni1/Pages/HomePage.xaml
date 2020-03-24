@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:pages="clr-namespace:Makuni1.Pages"
+            mc:Ignorable="d"
+             x:Class="Makuni1.Pages.HomePage"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="LightGray"
+            SelectedTabColor="Blue"
+            UnselectedTabColor="White"
+            NavigationPage.HasNavigationBar="True"
+            NavigationPage.HasBackButton="False">
+    
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal"  Spacing="0" Margin="0">
+            <Frame VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"  >
+                <StackLayout>
+                    <Label Text="MAKUNI" FontSize="Large"/>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="TapMakuni" Tapped="TapMakuni_Tapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Frame VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"  >
+                <StackLayout>
+                    <Label Text="PROFILE" FontSize="Large" />
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="TapProfile" Tapped="TapProfile_Tapped"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+
+
+</TabbedPage>

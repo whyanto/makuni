@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sandbox="clr-namespace:Makuni1.Pages"
+             mc:Ignorable="d"
+             x:Class="Makuni1.Pages.MainView"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid RowSpacing="0" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="AUTO" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" Style="{StaticResource PorkkanaVäriStack}">
+            <StackLayout HeightRequest="25"/>
+            <StackLayout Orientation="Horizontal" Margin="20,0,20,0">
+
+                <Image Source="logo1.png" HeightRequest="30" Aspect="AspectFit" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Button1_Clicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Frame Style="{StaticResource PorkkanaVäriFrame}" HorizontalOptions="EndAndExpand" HeightRequest="30" Padding="5" HasShadow="False">
+                    <StackLayout Margin="0" Orientation="Horizontal">
+                        <Image Source="NavigaatioProfiili1.png" Aspect="AspectFit" HorizontalOptions="EndAndExpand"/>
+                        <Label Text="250 p" FontSize="14" Style="{StaticResource PoppinsBold}" VerticalOptions="Center" TextColor="White"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Button2_Clicked"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+        
+        <StackLayout Grid.Row="2" Style="{StaticResource BottomBarColor}" Padding="0">
+            <StackLayout Style="{StaticResource BottomBarStyle}" HeightRequest="45" Padding="0">
+                <Image Source="{StaticResource barcode}" Aspect="AspectFit" HorizontalOptions="StartAndExpand" HeightRequest="48">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Button3_Clicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="{StaticResource search}" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" HeightRequest="48">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Button4_Clicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="{StaticResource idea}" Aspect="AspectFit" HorizontalOptions="EndAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Button5_Clicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                
+               
+            </StackLayout>
+        </StackLayout>
+        <sandbox:FrontPage x:Name="FrontView" Grid.Row="1" />
+        <sandbox:ProfilePage x:Name="ProfileView" Grid.Row="1" />
+        <sandbox:ScannerPage x:Name="ScannerView" Grid.Row="1" />
+        <sandbox:SearchPage x:Name="SearchView" Grid.Row="1" />
+        <sandbox:FeedbackPage x:Name="FeedbackView" Grid.Row="1" />
+
+
+    </Grid>
+</ContentPage>

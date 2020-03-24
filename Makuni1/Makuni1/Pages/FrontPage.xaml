@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Makuni1.Pages.FrontPage" >
+
+    <ScrollView HeightRequest="5000">
+
+        <Grid RowSpacing="0" BackgroundColor="WhiteSmoke">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" BackgroundColor="White" >
+                <StackLayout HeightRequest="30"/>
+                <StackLayout  HorizontalOptions="Center">
+                    <Label Text="VIIMEISET SKANNAUKSET" 
+                                   HorizontalOptions="CenterAndExpand" 
+                                   Style="{StaticResource PoppinsBold}"
+                                   TextColor="DarkBlue"  
+                                   FontSize="18"/>
+
+                    <Label Text="Arvostele tuotteet ja ansaitse pisteitä" 
+                                   HorizontalOptions="CenterAndExpand"
+                                   Style="{StaticResource PoppinsRegular}"
+                                   TextColor="DarkBlue" />
+
+                </StackLayout>
+                <StackLayout Grid.Row="1">
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="AUTO"/>
+                            <RowDefinition Height="AUTO"/>
+                        </Grid.RowDefinitions>
+
+
+
+
+
+                        <Frame Grid.Column="0" Grid.Row="0"  Style="{StaticResource FrontViewYläKuvanKoko}" HasShadow="False">
+                            <Image x:Name="VasenYla" VerticalOptions="StartAndExpand" HorizontalOptions="Fill"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped0"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+
+                        <Frame  Grid.Column="1" Grid.Row="0"  Style="{StaticResource FrontViewYläKuvanKoko}" HasShadow="False" >
+                            <Image x:Name="OikeaYla" VerticalOptions="CenterAndExpand"/>
+                                <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped1"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+
+                        <Frame Grid.Column="0" Grid.Row="1" Style="{StaticResource FrontViewYläKuvanKoko}" HasShadow="False">
+                            <Image x:Name="VasenAla" VerticalOptions="CenterAndExpand"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped2"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+
+                        <Frame Grid.Column="1" Grid.Row="1" Style="{StaticResource FrontViewYläKuvanKoko}" HasShadow="False">
+                            <Image x:Name="OikeaAla" VerticalOptions="CenterAndExpand"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped3"/>
+                            </Frame.GestureRecognizers>
+                         </Frame>  
+
+                    
+                    </Grid>
+                </StackLayout>
+
+            
+                
+                
+                
+                
+                
+            </StackLayout>
+            <StackLayout Grid.Row="1" BackgroundColor="White">
+                <Frame  Style="{StaticResource PorkkanaVäriFrame}" Margin="10" HeightRequest="200" CornerRadius="20">
+                    <StackLayout>
+                        <Label Text="JUURI NYT:" HorizontalOptions="Center" TextColor="White" Style="{StaticResource PoppinsBold}" FontSize="18"/>
+                        <StackLayout  Spacing="1" BackgroundColor="White">
+                            <StackLayout Orientation="Horizontal" Style="{StaticResource PorkkanaVäriStack}">
+                                <Label Text="Ilmainen suklaalevy Ärrältä 50 pisteellä" TextColor="White" Style="{StaticResource PoppinsMedium}" FontSize="16"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Style="{StaticResource PorkkanaVäriStack}">
+                                <Label Text="Makuni pop-up 300m päässä" TextColor="White" Style="{StaticResource PoppinsMedium}" FontSize="16"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Style="{StaticResource PorkkanaVäriStack}">
+                                <Label Text="Ilmainen jäätelö K-kaupasta 100 pisteellä" TextColor="White" Style="{StaticResource PoppinsMedium}" FontSize="16"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <Frame Grid.Row="2" BackgroundColor="White" Margin="10" CornerRadius="20">
+                <StackLayout>
+                    <Label Text="VIIKON TYKÄTYIMMÄT" HorizontalOptions="Center" Style="{StaticResource PoppinsBold, PorkkanaVäriLabel}" FontSize="18"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+
+                            <RowDefinition Height="AUTO"/>
+                            <RowDefinition Height="AUTO"/>
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Grid.Column="0" Grid.Row="0"  Style="{StaticResource FrontViewAlaKuvanKoko}" >
+                            <Label Text="kuva1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="0"  Style="{StaticResource FrontViewAlaKuvanKoko}"  >
+                            <Label Text="kuva2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="0" Grid.Row="1" Style="{StaticResource FrontViewAlaKuvanKoko}"  >
+                            <Label Text="kuva3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="1" Style="{StaticResource FrontViewAlaKuvanKoko}" >
+                            <Label Text="kuva4" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+
+                    </Grid>
+
+                </StackLayout>
+
+            </Frame>
+            <StackLayout Grid.Row="3" HeightRequest="80">
+                <ImageButton Source="yellowquestion.png" BackgroundColor="WhiteSmoke" HorizontalOptions="CenterAndExpand" Clicked="ImageButton_Clicked"/>
+            </StackLayout>
+        </Grid>
+
+
+    </ScrollView>
+
+
+</ContentView>

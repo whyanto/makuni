@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Makuni1.Pages.SearchPage">
+
+    
+    <Grid RowSpacing="0" BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="0">
+            <StackLayout>
+                <StackLayout  Margin="30,0,30,0" Orientation="Horizontal">
+                    <Image Source="search.png" Scale="0.8"/>
+                    <Entry Placeholder="Hae" HorizontalOptions="FillAndExpand" TextChanged="Entry_TextChanged"/>
+                </StackLayout>
+
+
+                <StackLayout   Spacing="8" Margin="20,0,20,0" >
+                    <Grid ColumnSpacing="1" BackgroundColor="LightGray">
+                        <Button Text="KAIKKI TUOTTEET" BackgroundColor="White"/>
+                        <Button Text="OMAT ARVOSTELUT" BackgroundColor="White" Grid.Column="1"/>
+                    </Grid>
+                    <StackLayout BackgroundColor="LightGray" HeightRequest="1"/>
+                </StackLayout>
+            </StackLayout>
+            </ScrollView>
+        <StackLayout Grid.Row="1" BackgroundColor="White">
+            <Frame Margin="40,0,40,0" HasShadow="False" x:Name="EtsiTuotteita">
+                    <StackLayout>
+                        <Image Source="PakettiHaku1.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" HeightRequest="120"/>
+                        <Label Text="Etsi tuotteita hakutyökalulla. Voit rajata hakutuloksia tuotekategorian mukaan tai tuotetta valmistavan yrityksn mukaan." HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+            </Frame>
+            
+            <ScrollView BackgroundColor="White" >
+                <ListView HasUnevenRows="True"
+                          RowHeight="120"
+                          x:Name="LvSearch"
+                          ItemSelected="LvSearch_ItemSelected"
+                          >
+                    <ListView.ItemTemplate >
+                        <DataTemplate>
+                            <ViewCell x:Name="AllergeeniViewcell">
+                                <StackLayout Spacing="0">
+                                    <StackLayout BackgroundColor="White"
+                                                  Orientation="Horizontal">
+                                        <Image Source="{Binding Image}" Aspect="AspectFit" HeightRequest="90" WidthRequest="90"/>
+                                        <Label FontSize="Medium"
+                                               VerticalOptions="CenterAndExpand"
+                                               TextColor="Black"
+                                               Text="{Binding Name}"
+                                               />
+                                    </StackLayout>
+                                    <StackLayout HeightRequest="1" BackgroundColor="LightGray" Margin="20,0,20,0" Spacing="0"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+        <ActivityIndicator x:Name="BusyIndicator" HorizontalOptions="Center"
+                           VerticalOptions="Center" Color="Red" IsRunning="False"/>
+    </Grid>
+    
+</ContentView>

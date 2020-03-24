@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Makuni1.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#FFA500"/>
+            </Style>
+
+            <Style TargetType="StackLayout" x:Key="PorkkanaVäriStack">
+                <Setter Property="BackgroundColor" Value="#FFA500"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="PorkkanaVäriFrame">
+                <Setter Property="BackgroundColor" Value="#FFA500"/>
+            </Style>
+            <Style TargetType="Label" x:Key="PorkkanaVäriLabel">
+                <Setter Property="TextColor" Value="#FFA500"/>
+            </Style>
+
+            <Style TargetType="StackLayout" x:Key="FrontViewYläKuvanKoko">
+                <Setter Property="WidthRequest" Value="160"/>
+                <Setter Property="HeightRequest" Value="130"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+            <Style TargetType="StackLayout" x:Key="FrontViewAlaKuvanKoko">
+                <Setter Property="WidthRequest" Value="100"/>
+                <Setter Property="HeightRequest" Value="100"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+            
+            <Style TargetType="StackLayout" x:Key="BottomBarColor">
+                <Setter Property="BackgroundColor" Value="LightGray"/>
+            </Style>
+
+            <x:String x:Key="idea">NavigaatioIdea1.png</x:String>
+            <x:String x:Key="search">NavigaatioHaku1.png</x:String>
+            <x:String x:Key="barcode">NavigaatioSkannaus1.png</x:String>
+            <Style TargetType="StackLayout" x:Key="BottomBarStyle">
+                <Setter Property="Margin" Value="25,5,25,5"/>
+                <Setter Property="Orientation" Value="Horizontal"/>
+                <Setter Property="Scale" Value="0.8"/>
+            </Style>
+
+            <Style TargetType="Button"  x:Key="TitleviewStyle_1">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="BackgroundColor" Value="#F8B113"/>
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.Android>
+                                LeckerliOne.ttf#LeckerliOne
+                            </OnPlatform.Android>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            
+            <Style TargetType="ImageButton" x:Key="TitleviewStyle_2">
+                
+                <Setter Property="BackgroundColor" Value="#F8B113"/>
+            </Style>
+            <x:String x:Key="MakuniTitle">makuni.png</x:String>
+
+            <Style x:Key="TitleStyle" TargetType="Button">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.Android>
+                                LeckerliOne.ttf#LeckerliOne
+                            </OnPlatform.Android>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="LeckerliOne" TargetType="Label">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.Android>
+                                LeckerliOne.ttf#LeckerliOne
+                            </OnPlatform.Android>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="PoppinsBold" TargetType="Label">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.Android>
+                                Poppins-Bold.ttf#Poppins-Bold.ttf
+                            </OnPlatform.Android>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="PoppinsLight" TargetType="Label">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.Android>
+                                Poppins-Light.ttf#Poppins-Light.ttf
+                            </OnPlatform.Android>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="PoppinsRegular" TargetType="Label">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.Android>
+                                Poppins-Regular.ttf#Poppins-Regular.ttf
+                            </OnPlatform.Android>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="PoppinsMedium" TargetType="Label">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.Android>
+                                Poppins-Medium.ttf#Poppins-Medium.ttf
+                            </OnPlatform.Android>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

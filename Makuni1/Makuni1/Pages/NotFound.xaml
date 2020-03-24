@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Makuni1.Models.NotFound">
+
+
+
+    <Grid Margin="40,40,40,0" RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackLayout Grid.Row="0">
+            <Label Text="Voi harmi!" TextColor="#312782" Style="{StaticResource LeckerliOne}" FontSize="26" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1">
+            <Label Text="Skannaamaasi tuotetta ei löydy." TextColor="#312782" Style="{StaticResource PoppinsRegular}" FontSize="15" HorizontalOptions="Center"/>
+        </StackLayout>
+        <StackLayout Grid.Row="2">
+            <Label Text="KUVA" FontSize="30" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="3">
+            <Label Text="Hätä ei ole kuitenkaan tämän näköinen, voit ehdottaa tuotteen lisäämistä ja ainsaita samalla pisteitä!" TextColor="#312782" Style="{StaticResource PoppinsRegular}" FontSize="15" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+        <StackLayout Grid.Row="4">
+            <Button CornerRadius="20" Text="ILMIANNA PUUTTUVA TUOTE" BackgroundColor="#F8B113" TextColor="White" FontSize="Large"/>
+        </StackLayout>
+
+
+
+
+
+    </Grid>
+    
+</ContentView>

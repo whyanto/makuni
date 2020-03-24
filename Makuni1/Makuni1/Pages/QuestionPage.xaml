@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Makuni1.Pages.QuestionPage">
+
+    <Grid Style="{StaticResource PorkkanaVäriStack}" x:Name="PaaGrid" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="AUTO"/>
+        </Grid.RowDefinitions>
+
+
+
+        <StackLayout Grid.Row="0" Margin="50,40,50,10" HorizontalOptions="Center" >
+            <Label x:Name="lblProductName" TextColor="White" Style="{StaticResource PoppinsRegular}" FontSize="18" HorizontalTextAlignment="Center"/>
+            <Label x:Name="lblOsio" Text="MAKU" TextColor="White" Style="{StaticResource PoppinsBold}" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+
+        <ScrollView Grid.Row="1" x:Name="Skroll" IsEnabled="False" >
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="500"/>
+                        <RowDefinition Height="500"/>
+                        <RowDefinition Height="500"/>
+                        <RowDefinition Height="500"/>
+                        <RowDefinition Height="500"/>
+                        <RowDefinition Height="500"/>
+                        <RowDefinition Height="500"/>
+                        <RowDefinition Height="500"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0">
+                        <Label Text="Tykkäsitkö mausta?" TextColor="White" FontSize="20" Style="{StaticResource PoppinsBold}" HorizontalTextAlignment="Center"/>
+                        <Image HeightRequest="200" WidthRequest="200" Source="arvostelumielipide3.png" HorizontalOptions="Center" VerticalOptions="Center" x:Name="tykkasitkoMaustaKuva"/>
+                        <Label x:Name="lblTykkasitkoMausta" Text="Pidin mausta." TextColor="White" FontSize="16" HorizontalTextAlignment="Center"/>
+                        <StackLayout Margin="20,0,20,0">
+                            <Slider MinimumTrackColor="White" MaximumTrackColor="Gray" ThumbColor="White" WidthRequest="30" Maximum="100" Minimum="0" Value="51" x:Name="tykkasitkoMaustaSlider" ValueChanged="TykkasitkoMaustaSlider_ValueChanged" />
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1">
+                        <Label Text="Millainen oli tuotteen makeus?" TextColor="White" FontSize="20" Style="{StaticResource PoppinsBold}" HorizontalTextAlignment="Center"/>
+                        <StackLayout Orientation="Horizontal" Spacing="0">
+                            <Image Source="ArvosteluMakeusLiianVahan1.png" Aspect="AspectFit" WidthRequest="120" Opacity="0.5" x:Name="imgMakeusLiianvahan">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="MakeusLiianvahan_Tapped"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Source="ArvosteluMakeusSopiva1.png" Aspect="AspectFit" WidthRequest="120" x:Name="imgMakeusSopiva" >
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="MakeusSopiva_Tapped"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Source="ArvosteluMakeusLiikaa1.png" Aspect="AspectFit" WidthRequest="120" Opacity="0.5" x:Name="imgMakeusLiikaa">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="MakeusLiikaa_Tapped"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                        <Label x:Name="lblMakeus" Text="Makeus on sopiva." TextColor="White" FontSize="16" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2">
+                        <Label Text="Miten aiot toimia jatkossa" TextColor="White" FontSize="20" Style="{StaticResource PoppinsBold}" HorizontalTextAlignment="Center"/>
+                        <Image HeightRequest="200" WidthRequest="200" x:Name="mtnToimitJatkossaKuva" HorizontalOptions="Center" VerticalOptions="Center" Source="arvostelu3ostan15.png"/>
+                        <Label x:Name="lblMitenToimitJatkossa" Text="Voisin ostaa tuotteen uudelleen." TextColor="White" FontSize="16" HorizontalTextAlignment="Center"/>
+                        <StackLayout Margin="20,0,20,0">
+                            <Slider x:Name="mtnToimitJatkossaSlider" MinimumTrackColor="White" MaximumTrackColor="Gray" ThumbColor="White" WidthRequest="30" Maximum="100" Minimum="0" Value="51" ValueChanged="mtnToimitJatkossaSlider_ValueChanged">
+                            </Slider>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3" TranslationY="-8">
+                        <Label Text="Millainen tuotteen rakenne oli?" TextColor="White" FontSize="20" Style="{StaticResource PoppinsBold}" HorizontalTextAlignment="Center"/>
+                        <Grid HorizontalOptions="Center" RowSpacing="10" ColumnSpacing="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Row="0" Grid.Column="0">
+                                <Image  Source="arvosteluadjektiivitausta17.png" Scale="1.3" Opacity="0.5" x:Name="imgKuiva"/>
+
+                                <Label Style="{StaticResource PoppinsMedium}" FontSize="16" 
+                                   TextColor="DarkBlue" Text="Kuiva" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TuotteenRakenne1_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+
+
+                            <Grid Grid.Row="0" Grid.Column="1">
+                                <Image  Source="arvosteluadjektiivitausta17.png" Scale="1.3" Opacity="0.5" x:Name="imgJauhoinen"/>
+
+                                <Label Style="{StaticResource PoppinsMedium}" FontSize="16" 
+                                   TextColor="DarkBlue" Text="Jauhoinen" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TuotteenRakenne2_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+
+                            <Grid Grid.Row="0" Grid.Column="2">
+                                <Image  Source="arvosteluadjektiivitausta17.png" Scale="1.3" Opacity="0.5" x:Name="imgRapea"/>
+
+                                <Label Style="{StaticResource PoppinsMedium}" FontSize="16" 
+                                   TextColor="DarkBlue" Text="Rapea" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TuotteenRakenne3_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="1" Grid.Column="0">
+                                <Image  Source="arvosteluadjektiivitausta17.png" Scale="1.3" Opacity="0.5" x:Name="imgRoiskuva"/>
+
+                                <Label Style="{StaticResource PoppinsMedium}" FontSize="16" 
+                                   TextColor="DarkBlue" Text="Roiskuva" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TuotteenRakenne4_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="1" Grid.Column="1">
+                                <Image  Source="arvosteluadjektiivitausta17.png" Scale="1.3" Opacity="0.5" x:Name="imgIlmava"/>
+
+                                <Label Style="{StaticResource PoppinsMedium}" FontSize="16" 
+                                   TextColor="DarkBlue" Text="Ilmava" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TuotteenRakenne5_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="1" Grid.Column="2">
+                                <Image  Source="arvosteluadjektiivitausta17.png" Scale="1.3" Opacity="0.5" x:Name="imgKova"/>
+
+                                <Label Style="{StaticResource PoppinsMedium}" FontSize="16" 
+                                   TextColor="DarkBlue" Text="Kova" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TuotteenRakenne6_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="2" Grid.Column="0">
+                                <Image  Source="arvosteluadjektiivitausta17.png" Scale="1.3" Opacity="0.5" x:Name="imgPehmea"/>
+
+                                <Label Style="{StaticResource PoppinsMedium}" FontSize="16" 
+                                   TextColor="DarkBlue" Text="Pehmeä" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TuotteenRakenne7_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="2" Grid.Column="1">
+                                <Image  Source="arvosteluadjektiivitausta17.png" Scale="1.3" Opacity="0.5" x:Name="imgHajoava"/>
+
+                                <Label Style="{StaticResource PoppinsMedium}" FontSize="16" 
+                                   TextColor="DarkBlue" Text="Hajoava" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TuotteenRakenne8_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="2" Grid.Column="2">
+                                <Image  Source="arvosteluadjektiivitausta17.png" Scale="1.3" Opacity="0.5" x:Name="imgTasainen"/>
+
+                                <Label Style="{StaticResource PoppinsMedium}" FontSize="16" 
+                                   TextColor="DarkBlue" Text="Tasainen" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TuotteenRakenne9_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                        </Grid>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="4" TranslationY="-12">
+                        <Label Text="Järjestä valitsemasi ominaisuudet" TextColor="White" FontSize="20" Style="{StaticResource PoppinsBold}" HorizontalTextAlignment="Center"/>
+                        <Label Text="Aseta paras ominaisuus ylimmäksi" TextColor="White" FontSize="16" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+
+
+                    <StackLayout Grid.Row="5" TranslationY="-16">
+                        <Label Text="Miten pakkaus mielestäsi kierrätetään" TextColor="White" FontSize="20" Style="{StaticResource PoppinsBold}" HorizontalTextAlignment="Center"/>
+                        <ScrollView Orientation="Horizontal" HeightRequest="150" IsEnabled="False" Scrolled="kierratysScrollView_Scrolled" x:Name="kierratysScrollView" HorizontalScrollBarVisibility="Never">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout WidthRequest="120"/>
+                                <Image Source="kierratyslasi15.png" Opacity="1" WidthRequest="120" x:Name="imgkierratyslasi"/>
+                                <Image Source="kierratysmetalli15.png" Opacity="0.5" WidthRequest="120" x:Name="imgkierratysmetalli"/>
+                                <Image Source="kierratysmuovi15.png" Opacity="0.5" WidthRequest="120" x:Name="imgkierratysmuovi"/>
+                                <Image Source="kierratyspahvi15.png" Opacity="0.5" WidthRequest="120" x:Name="imgkierratyspahvi"/>
+                                <Image Source="kierratyspaperi15.png" Opacity="0.5" WidthRequest="120" x:Name="imgkierratyspaperi"/>
+                                <Image Source="kierratysseka15.png" Opacity="0.5" WidthRequest="120" x:Name="imgkierratysseka"/>
+                                <StackLayout WidthRequest="120"/>
+                            </StackLayout>
+
+                        </ScrollView>
+                        <Label Text="Lasi" x:Name="lblKierratys" HorizontalOptions="Center" TextColor="White" Style="{StaticResource PoppinsLight}" FontSize="16"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="6" TranslationY="-20">
+                        <Label Text="Oliko pakkaus mielestäsi helppo avata?" TextColor="White" FontSize="20" Style="{StaticResource PoppinsBold}" HorizontalTextAlignment="Center"/>
+                        <Image HeightRequest="200" WidthRequest="200" Source="arvostelumielipide3.png" HorizontalOptions="Center" VerticalOptions="Center" x:Name="pakkausHelppoAvata"/>
+                        <Label x:Name="lblPakkausHelppoAvata" Text="Pakkaus oli helppo avata." TextColor="White" FontSize="16" HorizontalTextAlignment="Center"/>
+                        <StackLayout Margin="20,0,20,0">
+                            <Slider MinimumTrackColor="White" MaximumTrackColor="Gray" ThumbColor="White" WidthRequest="30" Maximum="100" Minimum="0" Value="51" x:Name="pakkausHelppoAvataSlider" ValueChanged="pakkausHelppoAvataSlider_ValueChanged"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="7" TranslationY="-24">
+                        <Image HeightRequest="50" Source="ikonivalkoinen20.png" />
+                        <Label Text="Hurraa!" TextColor="White" FontSize="14" Style="{StaticResource PoppinsBold}" HorizontalTextAlignment="Center"/>
+                        <Label Text="Vastasit kaikkiin kysymyksiin!" TextColor="White" FontSize="16" Style="{StaticResource PoppinsMedium}" HorizontalTextAlignment="Center"/>
+                        <Label Text="Haluatko sanoa vielä jotain tuotteesta?" TextColor="White" FontSize="16" Style="{StaticResource PoppinsMedium}" HorizontalTextAlignment="Center"/>
+                        <Label Text="Merkkejä jäljellä 50/50" TextColor="White" x:Name="lblMerkkejaJaljella" HorizontalOptions="End" TranslationY="15" Margin="0,0,20,0"/>
+                        <Entry Margin="20,0,20,0" Placeholder="Kerro mielipiteesi..." TextChanged="entryValmis_TextChanged"  x:Name="entryValmis" MaxLength="50" Opacity="0.7"/>
+
+
+                        <Frame BackgroundColor="White" CornerRadius="30" HasShadow="True">
+                            <Label Text="VALMIS" TextColor="DarkBlue" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ValmisBtn_Tapped"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </StackLayout>
+
+
+                </Grid>
+
+            </StackLayout>
+
+        </ScrollView>
+
+
+
+
+
+        <StackLayout Grid.Row="2" Margin="0"  VerticalOptions="EndAndExpand">
+            <StackLayout >
+                <Button Text="UP" TextColor="White" FontSize="18" HorizontalOptions="EndAndExpand" Clicked="EDELLINEN" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="X" TextColor="White" FontSize="18"/>
+                <Button Text="DOWN" TextColor="White" FontSize="18" HorizontalOptions="EndAndExpand" Clicked="SEURAAVA" />
+            </StackLayout>
+
+        </StackLayout>
+
+        <Grid.GestureRecognizers>
+            <SwipeGestureRecognizer Direction="Down" Swiped="EDELLINEN"/>
+            <SwipeGestureRecognizer Direction="Up" Swiped="SEURAAVA"/>
+        </Grid.GestureRecognizers>
+    </Grid>
+
+
+
+</ContentPage>
