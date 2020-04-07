@@ -808,11 +808,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj",
+      "projectUniqueName": "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj",
       "projectName": "Makuni1",
-      "projectPath": "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj",
+      "projectPath": "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj",
       "packagesPath": "C:\\Users\\aleks\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1\\obj\\",
+      "outputPath": "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

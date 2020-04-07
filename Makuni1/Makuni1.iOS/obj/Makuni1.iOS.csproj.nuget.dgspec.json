@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1.iOS\\Makuni1.iOS.csproj": {}
+    "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1.iOS\\Makuni1.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1.iOS\\Makuni1.iOS.csproj": {
+    "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1.iOS\\Makuni1.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1.iOS\\Makuni1.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1.iOS\\Makuni1.iOS.csproj",
         "projectName": "Makuni1.iOS",
-        "projectPath": "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1.iOS\\Makuni1.iOS.csproj",
+        "projectPath": "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1.iOS\\Makuni1.iOS.csproj",
         "packagesPath": "C:\\Users\\aleks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1.iOS\\obj\\",
+        "outputPath": "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj": {
-                "projectPath": "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj"
+              "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj": {
+                "projectPath": "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj"
               }
             }
           }
@@ -81,14 +81,14 @@
         }
       }
     },
-    "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj": {
+    "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj",
+        "projectUniqueName": "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj",
         "projectName": "Makuni1",
-        "projectPath": "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj",
+        "projectPath": "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj",
         "packagesPath": "C:\\Users\\aleks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1\\obj\\",
+        "outputPath": "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

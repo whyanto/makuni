@@ -2181,11 +2181,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1.Android\\Makuni1.Android.csproj",
+      "projectUniqueName": "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1.Android\\Makuni1.Android.csproj",
       "projectName": "Makuni1.Android",
-      "projectPath": "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1.Android\\Makuni1.Android.csproj",
+      "projectPath": "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1.Android\\Makuni1.Android.csproj",
       "packagesPath": "C:\\Users\\aleks\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1.Android\\obj\\",
+      "outputPath": "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2206,8 +2206,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj": {
-              "projectPath": "C:\\Users\\aleks\\source\\repos\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj"
+            "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj": {
+              "projectPath": "C:\\Users\\aleks\\Desktop\\Git repositoriot\\Makuni1\\Makuni1\\Makuni1\\Makuni1.csproj"
             }
           }
         }

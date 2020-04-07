@@ -40,5 +40,13 @@ namespace Makuni1.Services
             var response = await httpClient.GetStringAsync($"http://makuni.azurewebsites.net/api/Tuotteet/HaeRavintoarvot?={ean}");
             return JsonConvert.DeserializeObject<List<Ravintoarvot>>(response);
         }
+        public static async Task<bool> LahetaArvostelu(Arvostelu arvostelu)
+        {
+            var client = new HttpClient();
+            var json = JsonConvert.SerializeObject(arvostelu);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await client.PostAsync("http://makuni.azurewebsites.net/api/Arvostelut/LahetaArvostelu", content);
+            return response.IsSuccessStatusCode;
+        }
     }
 }

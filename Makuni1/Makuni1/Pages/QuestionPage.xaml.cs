@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Makuni1.Models;
+using Makuni1.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,28 +14,30 @@ namespace Makuni1.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class QuestionPage : ContentPage
     {
+        private string TuotteenEAN = "";
         private int sivuGridKorkeus = 0;
         private int variVaihtuu = 1;
         private int tykkasitkoMaustaPisteet = 3;
-        private string tuotteenMakeus = "Makeus on sopiva.";
+        private int tuotteenMakeusPisteet = 2;
         private int mtnJatkossaPisteet = 3;
         private int pakkausHelppoAvataPisteet = 3;
-        private bool rakenneKuiva = false;
-        private bool rakenneJauhoinen = false;
-        private bool rakenneRapea = false;
-        private bool rakenneRoiskuva = false;
-        private bool rakenneIlmava = false;
-        private bool rakenneKova = false;
-        private bool rakennePehmea = false;
-        private bool rakenneHajoava = false;
-        private bool rakenneTasainen = false;
-        private string mikaKierratys = "Lasi";
+        private int rakenneKuiva = 0;
+        private int rakenneJauhoinen = 0;
+        private int rakenneRapea = 0;
+        private int rakenneRoiskuva = 0;
+        private int rakenneIlmava = 0;
+        private int rakenneKova = 0;
+        private int rakennePehmea = 0;
+        private int rakenneHajoava = 0;
+        private int rakenneTasainen = 0;
+        private int mikaKierratys = 1;      //Lasi,Metalli,Muovi,Pahvi,Paperi,Seka
         private string entryValmisText = "";
         private int entryValmisLenght = 0;
         public QuestionPage(string ean, string tuotteenNimi)
         {
             InitializeComponent();
             lblProductName.Text = tuotteenNimi;
+            TuotteenEAN = ean;
         }
         private void EDELLINEN(object sender, SwipedEventArgs e)
         {
@@ -235,12 +239,12 @@ namespace Makuni1.Pages
         {
             if (imgKuiva.Opacity != 1)
             {
-                rakenneKuiva = true;
+                rakenneKuiva = 1;
                 imgKuiva.Opacity = 1;
             }
             else
             {
-                rakenneKuiva = false;
+                rakenneKuiva = 0;
                 imgKuiva.Opacity = 0.5;
             }
 
@@ -249,12 +253,12 @@ namespace Makuni1.Pages
         {
             if (imgJauhoinen.Opacity != 1)
             {
-                rakenneJauhoinen = true;
+                rakenneJauhoinen = 1;
                 imgJauhoinen.Opacity = 1;
             }
             else
             {
-                rakenneJauhoinen = false;
+                rakenneJauhoinen = 0;
                 imgJauhoinen.Opacity = 0.5;
             }
         }
@@ -262,12 +266,12 @@ namespace Makuni1.Pages
         {
             if (imgRapea.Opacity != 1)
             {
-                rakenneRapea = true;
+                rakenneRapea = 1;
                 imgRapea.Opacity = 1;
             }
             else
             {
-                rakenneRapea = false;
+                rakenneRapea = 0;
                 imgRapea.Opacity = 0.5;
             }
         }
@@ -275,12 +279,12 @@ namespace Makuni1.Pages
         {
             if (imgRoiskuva.Opacity != 1)
             {
-                rakenneRoiskuva = true;
+                rakenneRoiskuva = 1;
                 imgRoiskuva.Opacity = 1;
             }
             else
             {
-                rakenneRoiskuva = false;
+                rakenneRoiskuva = 0;
                 imgRoiskuva.Opacity = 0.5;
             }
         }
@@ -288,12 +292,12 @@ namespace Makuni1.Pages
         {
             if (imgIlmava.Opacity != 1)
             {
-                rakenneIlmava = true;
+                rakenneIlmava = 1;
                 imgIlmava.Opacity = 1;
             }
             else
             {
-                rakenneIlmava = false;
+                rakenneIlmava = 0;
                 imgIlmava.Opacity = 0.5;
             }
         }
@@ -301,12 +305,12 @@ namespace Makuni1.Pages
         {
             if (imgKova.Opacity != 1)
             {
-                rakenneKova = true;
+                rakenneKova = 1;
                 imgKova.Opacity = 1;
             }
             else
             {
-                rakenneKova = false;
+                rakenneKova = 0;
                 imgKova.Opacity = 0.5;
             }
         }
@@ -314,12 +318,12 @@ namespace Makuni1.Pages
         {
             if (imgPehmea.Opacity != 1)
             {
-                rakennePehmea = true;
+                rakennePehmea = 1;
                 imgPehmea.Opacity = 1;
             }
             else
             {
-                rakennePehmea = false;
+                rakennePehmea = 0;
                 imgPehmea.Opacity = 0.5;
             }
         }
@@ -327,12 +331,12 @@ namespace Makuni1.Pages
         {
             if (imgHajoava.Opacity != 1)
             {
-                rakenneHajoava = true;
+                rakenneHajoava = 1;
                 imgHajoava.Opacity = 1;
             }
             else
             {
-                rakenneHajoava = false;
+                rakenneHajoava = 0;
                 imgHajoava.Opacity = 0.5;
             }
         }
@@ -340,12 +344,12 @@ namespace Makuni1.Pages
         {
             if (imgTasainen.Opacity != 1)
             {
-                rakenneTasainen = true;
+                rakenneTasainen = 1;
                 imgTasainen.Opacity = 1;
             }
             else
             {
-                rakenneTasainen = false;
+                rakenneTasainen = 0;
                 imgTasainen.Opacity = 0.5;
             }
         }
@@ -355,7 +359,8 @@ namespace Makuni1.Pages
             if (kierratysScrollView.ScrollX < 90)
             {
                 imgkierratyslasi.Opacity = 1;
-                mikaKierratys = "Lasi";
+                lblKierratys.Text = "Lasi";
+                mikaKierratys = 1;
             }
             else
             {
@@ -365,7 +370,8 @@ namespace Makuni1.Pages
             if (kierratysScrollView.ScrollX >= 90 && kierratysScrollView.ScrollX < 210)
             {
                 imgkierratysmetalli.Opacity = 1;
-                mikaKierratys = "Metalli";
+                lblKierratys.Text = "Metalli";
+                mikaKierratys = 2;
             }
             else
             {
@@ -375,7 +381,8 @@ namespace Makuni1.Pages
             if (kierratysScrollView.ScrollX >= 210 && kierratysScrollView.ScrollX < 330)
             {
                 imgkierratysmuovi.Opacity = 1;
-                mikaKierratys = "Muovi";
+                lblKierratys.Text = "Muovi";
+                mikaKierratys = 3;
             }
             else
             {
@@ -385,7 +392,8 @@ namespace Makuni1.Pages
             if (kierratysScrollView.ScrollX >= 330 && kierratysScrollView.ScrollX < 450)
             {
                 imgkierratyspahvi.Opacity = 1;
-                mikaKierratys = "Pahvi";
+                lblKierratys.Text = "Pahvi";
+                mikaKierratys = 4;
             }
             else
             {
@@ -395,7 +403,8 @@ namespace Makuni1.Pages
             if (kierratysScrollView.ScrollX >= 450 && kierratysScrollView.ScrollX < 570)
             {
                 imgkierratyspaperi.Opacity = 1;
-                mikaKierratys = "Paperi";
+                lblKierratys.Text = "Paperi";
+                mikaKierratys = 5;
             }
             else
             {
@@ -405,13 +414,13 @@ namespace Makuni1.Pages
             if (kierratysScrollView.ScrollX >= 570 && kierratysScrollView.ScrollX < 690)
             {
                 imgkierratysseka.Opacity = 1;
-                mikaKierratys = "Seka";
+                lblKierratys.Text = "Seka";
+                mikaKierratys = 6;
             }
             else
             {
                 imgkierratysseka.Opacity = 0.5;
             }
-            lblKierratys.Text = mikaKierratys;
         }
 
         private void entryValmis_TextChanged(object sender, TextChangedEventArgs e)
@@ -419,10 +428,7 @@ namespace Makuni1.Pages
             entryValmisLenght = entryValmis.Text.Length;
             lblMerkkejaJaljella.Text = $"Merkkejä jäljellä {50 - entryValmis.Text.Length}/50";
         }
-        private void ValmisBtn_Tapped(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void MakeusLiianvahan_Tapped(object sender, EventArgs e)
         {
@@ -430,7 +436,7 @@ namespace Makuni1.Pages
             imgMakeusSopiva.Opacity = 0.5;
             imgMakeusLiikaa.Opacity = 0.5;
             lblMakeus.Text = "Makeutta on liian vähän.";
-            tuotteenMakeus = "Makeutta on liian vähän.";
+            tuotteenMakeusPisteet = 1;
         }
 
         private void MakeusSopiva_Tapped(object sender, EventArgs e)
@@ -439,7 +445,7 @@ namespace Makuni1.Pages
             imgMakeusSopiva.Opacity = 1;
             imgMakeusLiikaa.Opacity = 0.5;
             lblMakeus.Text = "Makeus on sopiva.";
-            tuotteenMakeus = "Makeus on sopiva.";
+            tuotteenMakeusPisteet = 2;
         }
 
         private void MakeusLiikaa_Tapped(object sender, EventArgs e)
@@ -448,7 +454,23 @@ namespace Makuni1.Pages
             imgMakeusSopiva.Opacity = 0.5;
             imgMakeusLiikaa.Opacity = 1;
             lblMakeus.Text = "Makeutta on liikaa.";
-            tuotteenMakeus = "Makeutta on liikaa.";
+            tuotteenMakeusPisteet = 3;
+        }
+        private async void ValmisBtn_Tapped(object sender, EventArgs e)
+        {
+            Arvostelu arvostelu = new Arvostelu(TuotteenEAN,tykkasitkoMaustaPisteet,tuotteenMakeusPisteet,mtnJatkossaPisteet,
+                                                pakkausHelppoAvataPisteet,rakenneKuiva,rakenneRoiskuva,rakenneIlmava,
+                                                rakenneKova,rakennePehmea,rakenneHajoava,rakenneTasainen,mikaKierratys,entryValmisText);
+            bool response = await ApiService.LahetaArvostelu(arvostelu);
+
+            if(response != true)
+            {
+                await DisplayAlert("Oho!", "Jokin meni vikaan =(", "Ok");
+            }
+            else
+            {
+                await DisplayAlert("Jippii!", "Kiitos palautteesta", "Ok");
+            }
         }
     }
 }
